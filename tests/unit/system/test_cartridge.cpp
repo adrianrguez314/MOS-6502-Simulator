@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <fstream>
 #include <vector>
-#include <cstdio> /
+#include <cstdio>
 #include "../../../../src/system/bus/bus.h"       
 #include "../../../../src/system/cartridge/cartridge.h"
 

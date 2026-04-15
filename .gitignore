@@ -55,6 +55,7 @@
 
 # Test Output and Logs
 *.log
+*.nes
 Testing/
 cmake_test_discovery_*.json
 *_metrics.json

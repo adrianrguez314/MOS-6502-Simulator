@@ -47,7 +47,7 @@ TEST(CPU, Nestest_Run)
     Bus bus;
     CPU cpu(bus);
 
-    auto cart = std::make_shared<Cartridge>("../../nestest.nes");
+    auto cart = std::make_shared<Cartridge>("../nestest.nes");
     ASSERT_TRUE(cart->ImageValid());
 
     bus.insertCartridge(cart);
