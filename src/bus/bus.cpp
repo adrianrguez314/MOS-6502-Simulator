@@ -15,7 +15,6 @@ void Bus::insertCartridge(const std::shared_ptr<Cartridge>& cartridge) {
 uint8_t Bus::read(uint16_t addr, bool bReadOnly) {
     uint8_t data = 0x00;
     
-
     if (cart && cart->cpuRead(addr, data)) { }
     else if (addr >= 0x0000 && addr <= 0x1FFF) {
         data = cpuRam[addr & 0x07FF];

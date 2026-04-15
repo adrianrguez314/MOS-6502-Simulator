@@ -42,6 +42,10 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
+if(NOT EXISTS "${CMAKE_SOURCE_DIR}/nestest.log")
+    file(DOWNLOAD "https://raw.githubusercontent.com/christopherpow/nes-test-roms/master/other/nestest.log" "${CMAKE_SOURCE_DIR}/nestest.log")
+endif()
+
 file(GLOB TEST_FILES "tests/*.cpp" "tests/instructions/*.cpp")
 
 add_executable(unit_tests ${TEST_FILES})

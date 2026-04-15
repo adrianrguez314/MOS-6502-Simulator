@@ -43,9 +43,7 @@ int CPU::executeInstruction() {
     uint16_t pc_status = registers.PC;
     
     const Instruction& instr = OPCODE_TABLE[opcode];
-    (this->*instr.handler)(instr.mode);
-
-    if (registers.PC == pc_status)  registers.PC += instr.len - 1; 
+    (this->*instr.handler)(instr.mode); 
 
     return instr.cycles + extra_cycles;
 }
@@ -68,10 +66,11 @@ void CPU::run(int cycles_to_run) {
 void CPU::branchRelative(bool condition) {
 
     int8_t offset = static_cast<int8_t>(bus.read(registers.PC)); 
+    registers.PC++; 
     
     if (condition) {
         addCycles(1); 
-        uint16_t oldPC = registers.PC + 1; 
+        uint16_t oldPC = registers.PC; 
         uint16_t newPC = oldPC + offset;
         
         if ((oldPC & 0xFF00) != (newPC & 0xFF00)) {

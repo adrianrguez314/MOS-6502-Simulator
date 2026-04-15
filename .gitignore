@@ -52,3 +52,10 @@
 /build/
 
 
+
+# Test Output and Logs
+*.log
+Testing/
+cmake_test_discovery_*.json
+*_metrics.json
+allure_results.xml
