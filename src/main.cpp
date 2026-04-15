@@ -1,8 +1,8 @@
 #include <iostream>
 #include <iomanip>
 
-#include "./cpu/cpu.h"
-#include "./bus/bus.h"
+#include "./core/6502/cpu.h"
+#include "./system/bus/bus.h"
 
 int main() {
     Bus bus;

@@ -17,12 +17,12 @@ message(STATUS "Download and install SDL2. Wait a moment...")
 FetchContent_MakeAvailable(SDL2)
 
 file(GLOB CPU_SOURCES 
-    "src/cpu/*.cpp"
-    "src/cpu/instructions/*.cpp"
-    "src/bus/*.cpp"
-    "src/cartridge/*.cpp"
-    "src/ppu/*.cpp"
-    "src/render/*.cpp"
+    "src/core/6502/*.cpp"
+    "src/core/6502/instructions/*.cpp"
+    "src/system/bus/*.cpp"
+    "src/system/cartridge/*.cpp"
+    "src/core/ppu/*.cpp"
+    "src/core/render/*.cpp"
 )
 list(FILTER CPU_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
 
@@ -46,7 +46,7 @@ if(NOT EXISTS "${CMAKE_SOURCE_DIR}/nestest.log")
     file(DOWNLOAD "https://raw.githubusercontent.com/christopherpow/nes-test-roms/master/other/nestest.log" "${CMAKE_SOURCE_DIR}/nestest.log")
 endif()
 
-file(GLOB TEST_FILES "tests/*.cpp" "tests/instructions/*.cpp")
+file(GLOB TEST_FILES "tests/integration/*.cpp" "tests/unit/system/*.cpp" "tests/unit/core/6502/*.cpp" "tests/unit/core/6502/instructions/*.cpp")
 
 add_executable(unit_tests ${TEST_FILES})
 target_link_libraries(unit_tests PRIVATE emulator_lib gtest_main)

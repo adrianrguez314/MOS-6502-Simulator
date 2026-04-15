@@ -1,19 +1,19 @@
-# NES CPU Emulator: A Formal Implementation of the MOS 6502 Architecture
-
-
+# MOS 6502 Architecture Core: A Formal Implementation
+*(MOS 6502 マイクロプロセッサのサイクルアキュレートなコアシミュレータ)*
 
 ---
 
-> **A cycle-accurate software emulation of the MOS 6502 microprocessor, designed for the Nintendo Entertainment System (NES) environment.**
+> **A cycle-accurate, headless software simulation of the MOS 6502 microprocessor architecture, designed strictly for Hardware Verification & Validation (V&V).**
 
 ---
 
 ## Architecture Overview
 
-The **MOS 6502** is an iconic 8-bit microprocessor that defined an era of computing. This project implements the core logic of the 6502, emphasizing the precise handling of its internal state and memory bus interactions.
+The **MOS 6502** is an iconic 8-bit microprocessor that defined an era of computing. This project implements the core logic of the 6502, emphasizing the precise handling of its internal state and memory bus interactions in a completely headless environment.
 
 ### The Significance of the 6502
-Introduced in 1975, the 6502’s efficient design—utilizing a minimal register set and advanced addressing modes—made it the heart of the Nintendo Entertainment System. Emulating this processor is a fundamental exercise in **Computer Architecture**, requiring a deep understanding of:
+Introduced in 1975, the 6502’s efficient design—utilizing a minimal register set and advanced addressing modes—made it the heart of classic microcomputers and iconic embedded systems (such as the Apple II, Commodore, and early Nintendo hardware). Simulating this processor is a fundamental exercise in **Computer Architecture** and **Silicon Verification**, requiring a deep understanding of:
+
 * **Pipelining**: Execution of instructions across multiple clock cycles.
 * **Effective Address Calculation**: Implementing complex modes like *Indirect Indexed* ($(Ind), Y$).
 * **State Machine Logic**: Managing the Program Counter ($PC$) and Status Register ($P$) with bit-level precision.
@@ -36,7 +36,7 @@ Introduced in 1975, the 6502’s efficient design—utilizing a minimal register
 
 This implementation is built upon modern industry standards, ensuring the code is as robust as the hardware it emulates.
 
-* **Language Standard**: **C++20/23**. Utilizes high-performance features such as `std::span` for memory safety and constexpr for compile-time table generation.
+* **Language Standard**: **C++20/23**. Utilizes high-performance features such as `std::span` for memory safety and `constexpr` for compile-time table generation.
 * **Build System**: **CMake**. A cross-platform configuration that manages dependencies and compilation targets.
 * **Testing Framework**: **Google Test (GTest)**. A rigorous suite of unit tests validates every opcode and addressing mode against known hardware behavioral patterns.
 * **Continuous Reporting**: Test results are automatically rendered into a visual `index.html` report, hosted via **GitHub Pages** for real-time integrity verification.
@@ -45,9 +45,9 @@ This implementation is built upon modern industry standards, ensuring the code i
 
 ## Bibliography & Documentation
 
-The development of this core is strictly guided by the following:
+The development of this core is strictly guided by the following standards and resources:
 
-1.  **[Nesdev Wiki](https://www.nesdev.org/)**: Primary source for NES hardware quirks and bus behavior.
+1.  **[Nesdev Wiki](https://www.nesdev.org/)**: Primary source for hardware quirks, memory mapping, and bus behavior of 6502 derivative chips.
 2.  **MOS 6502 Microprocessor Manual**: Foundational documentation for internal register logic and timing.
 3.  **[ISO/IEC 14882:2020 (C++20 Standard)](https://en.cppreference.com/w/cpp/20)**: Reference for the modern C++ paradigms utilized in the project.
 4.  **[Google Test Documentation](https://google.github.io/googletest/)**: Guidelines for the implementation of the project's validation architecture.
@@ -67,3 +67,4 @@ cmake --build build --config Release
 
 # Execute the GTest validation suite
 cd build && ctest --output-on-failure
+```
