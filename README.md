@@ -36,27 +36,27 @@ Introduced in 1975, the 6502’s efficient design—utilizing a minimal register
 
 This implementation is built upon modern industry standards, ensuring the code is as robust as the hardware it emulates.
 
-* **Language Standard**: **C++20/23**. Utiliza características de alto rendimiento como `std::span` para seguridad de memoria y `constexpr` para la generación de tablas en tiempo de compilación.
-* **Build System**: **CMake**. Configuración multiplataforma que gestiona dependencias y objetivos de compilación.
-* **Testing Framework**: **Google Test (GTest)**. Una rigurosa suite de pruebas unitarias valida cada opcode y modo de direccionamiento frente a patrones de comportamiento de hardware conocidos.
-* **Continuous Reporting**: Los resultados de las pruebas se renderizan automáticamente en un informe visual `index.html`, alojado a través de **GitHub Pages** para la verificación de integridad en tiempo real.
+* **Language Standard**: **C++20/23**. Utilizes high-performance features such as `std::span` for memory safety and `constexpr` for compile-time table generation.
+* **Build System**: **CMake**. A cross-platform configuration that manages dependencies and compilation targets.
+* **Testing Framework**: **Google Test (GTest)**. A rigorous suite of unit tests validates every opcode and addressing mode against known hardware behavioral patterns.
+* **Continuous Reporting**: Test results are automatically rendered into a visual `index.html` report, hosted via **GitHub Pages** for real-time integrity verification.
 
 ---
 
 ## Bibliography & Documentation
 
-El desarrollo de este núcleo está estrictamente guiado por los siguientes estándares:
+The development of this core is strictly guided by the following standards and resources:
 
-1.  **[Nesdev Wiki](https://www.nesdev.org/)**: Fuente principal para las particularidades del hardware y el comportamiento del bus de los chips derivados del 6502.
-2.  **MOS 6502 Microprocessor Manual**: Documentación fundamental para la lógica interna de los registros y el timing.
-3.  **[ISO/IEC 14882:2020 (C++20 Standard)](https://en.cppreference.com/w/cpp/20)**: Referencia para los paradigmas modernos de C++ utilizados en el proyecto.
-4.  **[Google Test Documentation](https://google.github.io/googletest/)**: Directrices para la implementación de la arquitectura de validación del proyecto.
+1.  **[Nesdev Wiki](https://www.nesdev.org/)**: Primary source for hardware quirks, memory mapping, and bus behavior of 6502 derivative chips.
+2.  **MOS 6502 Microprocessor Manual**: Foundational documentation for internal register logic and timing.
+3.  **[ISO/IEC 14882:2020 (C++20 Standard)](https://en.cppreference.com/w/cpp/20)**: Reference for the modern C++ paradigms utilized in the project.
+4.  **[Google Test Documentation](https://google.github.io/googletest/)**: Guidelines for the implementation of the project's validation architecture.
 
 ---
 
 ## Build and Validation Instructions
 
-Para asegurar que el entorno esté configurado correctamente, siga el procedimiento formal de compilación:
+To ensure the environment is correctly configured, follow the formal build procedure:
 
 ```bash
 # Generate build files
