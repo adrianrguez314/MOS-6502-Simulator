@@ -2,8 +2,8 @@
 #include <fstream>
 #include <vector>
 #include <cstdio> /
-#include "../../src/bus/bus.h"       
-#include "../../src/system/cartridge/cartridge.h"
+#include "../../../../src/system/bus/bus.h"       
+#include "../../../../src/system/cartridge/cartridge.h"
 
 
 void createTestROM(const std::string& filename) {

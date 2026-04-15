@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../../src/system/bus/bus.h"
+#include "../../../../src/system/bus/bus.h"
 
 TEST(Memory, ReadWriteByte) {
     Bus bus;

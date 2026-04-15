@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "../../src/core/6502/cpu.h"
-#include "../../src/core/6502/flags.h"
+#include "../../../../src/core/6502/cpu.h"
+#include "../../../../src/core/6502/flags.h"
 
 TEST(Flags, SetClearCarry) {
     Flags P;

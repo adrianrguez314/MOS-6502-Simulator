@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "../../src/core/6502/cpu.h"
-#include "../../src/core/6502/opcodes.h"
+#include "../../../../src/core/6502/cpu.h"
+#include "../../../../src/core/6502/opcodes.h"
 
 void loadProgram(Bus& bus, uint16_t addr, std::initializer_list<uint8_t> instructions) {
     for (auto byte : instructions) {
