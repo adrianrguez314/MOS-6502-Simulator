@@ -1,7 +1,14 @@
-# MOS 6502 Architecture Core: A Formal Implementation
+<div align="center">
+
+# 📟 MOS 6502 Architecture Core
+### *A Formal, Cycle-Accurate Implementation in C++*
 *(MOS 6502 マイクロプロセッサのサイクルアキュレートなコアシミュレータ)*
 
----
+[![C++ Standard](https://img.shields.io/badge/C%2B%2B-20%2F23-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://en.cppreference.com/w/cpp/20)
+[![CMake](https://img.shields.io/badge/Build-CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)](https://cmake.org/)
+[![GTest](https://img.shields.io/badge/Testing-GoogleTest-8A2BE2?style=for-the-badge&logo=google&logoColor=white)](https://google.github.io/googletest/)
+
+</div>
 
 > **A cycle-accurate, headless software simulation of the MOS 6502 microprocessor architecture, designed strictly for Hardware Verification & Validation (V&V).**
 
@@ -40,6 +47,20 @@ This implementation is built upon modern industry standards, ensuring the code i
 * **Build System**: **CMake**. A cross-platform configuration that manages dependencies and compilation targets.
 * **Testing Framework**: **Google Test (GTest)**. A rigorous suite of unit tests validates every opcode and addressing mode against known hardware behavioral patterns.
 * **Continuous Reporting**: Test results are automatically rendered into a visual `index.html` report, hosted via **GitHub Pages** for real-time integrity verification.
+
+...
+* **Continuous Reporting**: Test results are automatically rendered into a visual `index.html` report.
+
+---
+
+### 🔍 Core Execution Trace
+To validate pipeline integrity, the core generates detailed, cycle-accurate logs for every instruction execution:
+
+<p align="center">
+  <img src="https://i.imgur.com/5YllX7s.png" alt="MOS 6502 Core Execution Trace Preview" width="800">
+  <br>
+  <em>Figure 2: Real-time trace showing the synchronized state of the instruction and the resulting register state in the terminal.</em>
+</p>
 
 ---
 
