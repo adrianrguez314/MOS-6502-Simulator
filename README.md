@@ -48,9 +48,6 @@ This implementation is built upon modern industry standards, ensuring the code i
 * **Testing Framework**: **Google Test (GTest)**. A rigorous suite of unit tests validates every opcode and addressing mode against known hardware behavioral patterns.
 * **Continuous Reporting**: Test results are automatically rendered into a visual `index.html` report, hosted via **GitHub Pages** for real-time integrity verification.
 
-...
-* **Continuous Reporting**: Test results are automatically rendered into a visual `index.html` report.
-
 ---
 
 ### 🔍 Core Execution Trace
